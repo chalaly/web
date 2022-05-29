@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>기업 설명 홈페이지</title>
+	<script type="text/javascript">
+		// &chapter 6 자바스크립트 언어 (1)
+		function watch(y){
+			
+			while(true)
+			{
+				if(y=="네")
+				{
+					alert("통과")
+					return;
+				}
+				else
+				{
+					alert("나가주십시오.")
+				}
+			}
+		}
+	</script>
+	<script type="text/javascript">//&chapter9 이벤트기초 활용 select(1)
+		function drawImage(){
+			var sel = document.getElementById("company");
+			var img = document.getElementById("companyimage");
+			img.src = sel.options[sel.selectedIndex].value;
+		}
+	</script>
+	<style type="text/css">
+		/*chapter 4 css 1(색과 텍스트 꾸미기), 2(시각적 효과 text-shadow)*/
+		h1{ 
+			text-align: center;
+			color: aliceblue ;
+			text-shadow: 2px 2px 4px yellowgreen; 
+		}
+		
+
+		#menubar{
+			background: darkblue;
+			height: 20%;
+			
+		}
+		#menubar ul{
+			text-align: center;
+			margin: 10px;
+			padding: 10px;
+			width: 100%;
+		}
+		#menubar ul li{
+			display: inline-block;
+			list-style-type: none;
+			padding: 0px 15px;
+		}
+		/*chapter5 css 고급활용 1(인라인 블록)*/
+		#menubar ul li a{
+			color : white;
+			text-decoration: none;
+		}
+		/*chapter5 css 고급활용 2(리스트 꾸미기)*/
+		#menubar ul li a:hover{
+			color: violet;
+		}
+		#subject{
+			width: 600px;
+			margin-left: auto;
+			margin-right: auto;
+
+		}
+		#line{
+			background-color: darkblue;
+
+		}
+		img{
+			width: 500px;
+			height: 500px;
+		}
+
+		
+
+	</style>
+</head>
+<body id="body" onload="drawImage()">
+	<header><!--&chapter 3 문서구조화  1(시맨틱 태그)--> 
+		<h1>기업설명</h1>
+	</header>
+	<nav id = "menubar">
+		<ul>
+			<li><a href="file:///C:/Users/ckwns/Desktop/%EC%9B%B9%20%EA%B3%BC%EC%A0%9C/%EA%B8%B0%EC%97%85%EC%86%8C%EA%B0%9C.html">Home</a></li><!--&chapter2 HTML 기본 문서 1(리스트),2(하이퍼링크)-->
+			<li><a href="file:///C:/Users/ckwns/Desktop/%EC%9B%B9%20%EA%B3%BC%EC%A0%9C/%EC%A3%BC%EC%A0%9C%EC%84%A0%EC%A0%95%EB%8F%99%EA%B8%B0.html">주제 선정 동기</a> </li>
+			<li><a href="file:///C:/Users/ckwns/Desktop/%EC%9B%B9%20%EA%B3%BC%EC%A0%9C/%EA%B0%84%EB%9E%B5%ED%95%9C%EA%B8%B0%EC%97%85%EC%86%8C%EA%B0%9C.html">간략한 기업 소개</a></li>
+			<li><a href="file:///C:/Users/ckwns/Desktop/%EC%9B%B9%20%EA%B3%BC%EC%A0%9C/%EA%B8%B0%EC%97%85%EC%9D%98%EC%97%AD%EC%82%AC.html">기업의 역사</a></li>
+			<li><a href="file:///C:/Users/ckwns/Desktop/%EC%9B%B9%20%EA%B3%BC%EC%A0%9C/%EA%B8%B0%EC%97%85%EC%9D%98%EC%A3%BC%EC%9A%94%EC%84%9C%EB%B9%84%EC%8A%A4.html">기업의 주요 서비스</a></li>
+			
+		</ul>
+	</nav>
+	<script type="text/javascript">
+		var now = new Date();
+		if(now.getHours()<12){
+			document.body.style.backgroundColor="lightskyblue";
+		}
+		else
+		{
+			document.body.style.backgroundColor="lightblue";
+		}
+	</script>
+	<section>
+		<article>
+			<p id="subject">나는 아직 미래를 완벽하게 정하지는 않았지만 미래에 개발자가 된다면, 프론트 엔드와 백 엔드 중 백엔드 쪽을 가고 싶은 마음이 있다. 백 엔드는 여러 가지 능력이 필요하지만 개발 언어, 서버와 데이터베이스에 대한 이해도가 중요하다고 알고 있다. 그렇다면 내가 간다면 좋을 것 같은 기업을 생각해보기로 했다. 물론 대표적인 유명 대기업인 삼성, 네이버, 구글 등등을 가면 좋겠지만 내가 가지 못하더라도 나의 취미 생활과 곁들어진 기업이라도 소개하면 어떨까 라는 생각이 들었다. 나는 해외축구를 보는 것을 좋아하고 나름 열렬히 응원했던 시절도 있었다. 그래서 해외축구를 분석하고 배포하는 옵타라는 사이트를 가진 STATS PERFORM (PERFORM GROUP) 기업를 소개해보려 한다.
+           </p>
+           <hr>
+           </article>
+           <article>
+           	
+           	<form>
+           		<div style="text-align: center;">
+           		<select id="company" onchange="drawImage()"style ="display: inline-block;">
+           			<option value="naver.png">네이버
+           			<option value="samsung.png"selected>samsung
+           			<option value="kakao.png">kakao
+           			<option value="stats perform.png">stats perform
+           		</select>
+           	
+           		<img id="companyimage" src="samsung.png"alt="" style="vertical-align: middle;">
+           	</div>
+           	</form>
+           
+           </article>
+		<script type="text/javascript">
+		var y = prompt("보고싶으시면 '네'를 입력하세요");
+		watch(y);
+		</script>
+		
+	</section>
+	
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>기업설명홈페이지</title>
+	<style type="text/css">
+		/*chapter 4 css 1(색과 텍스트 꾸미기), 2(시각적 효과 text-shadow)*/
+		h1{ 
+			text-align: center;
+			color: aliceblue ;
+			text-shadow: 2px 2px 4px yellowgreen; 
+		}
+		
+
+		#menubar{
+			background: darkblue;
+			height: 20%;
+			
+		}
+		#menubar ul{
+			text-align: center;
+			margin: 10px;
+			padding: 10px;
+			width: 100%;
+		}
+		#menubar ul li{
+			display: inline-block;
+			list-style-type: none;
+			padding: 0px 15px;
+		}
+		/*chapter5 css 고급활용 1(인라인 블록)*/
+		#menubar ul li a{
+			color : white;
+			text-decoration: none;
+		}
+		/*chapter5 css 고급활용 2(리스트 꾸미기)*/
+		#menubar ul li a:hover{
+			color: violet;
+		}
+		#line{
+			background-color: darkblue;
+
+		}
+		pre{
+			text-align: right;
+		}
+		#text{
+			width: 600px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		summary{
+			text-align: center;
+		}
+		#ex{
+			text-align: center;
+		}
+		img{
+			text-align: center;
+		}
+		p{
+			text-align: center;
+		}
+
+	</style>
+</head>
+<body>
+	<header><!--&chapter 3 문서구조화  1(시맨틱 태그)--> 
+		<h1>기업설명</h1>
+	</header>
+	<nav id = "menubar">
+		<ul>
+			<li><a href="file:///C:/Users/ckwns/Desktop/%EC%9B%B9%20%EA%B3%BC%EC%A0%9C/%EA%B8%B0%EC%97%85%EC%86%8C%EA%B0%9C.html">Home</a></li><!--&chapter2 HTML 기본 문서 1(리스트),2(하이퍼링크)-->
+			<li><a href="file:///C:/Users/ckwns/Desktop/%EC%9B%B9%20%EA%B3%BC%EC%A0%9C/%EC%A3%BC%EC%A0%9C%EC%84%A0%EC%A0%95%EB%8F%99%EA%B8%B0.html">주제 선정 동기</a> </li>
+			<li><a href="file:///C:/Users/ckwns/Desktop/%EC%9B%B9%20%EA%B3%BC%EC%A0%9C/%EA%B0%84%EB%9E%B5%ED%95%9C%EA%B8%B0%EC%97%85%EC%86%8C%EA%B0%9C.html">간략한 기업 소개</a></li>
+			<li><a href="file:///C:/Users/ckwns/Desktop/%EC%9B%B9%20%EA%B3%BC%EC%A0%9C/%EA%B8%B0%EC%97%85%EC%9D%98%EC%97%AD%EC%82%AC.html">기업의 역사</a></li>
+			<li><a href="file:///C:/Users/ckwns/Desktop/%EC%9B%B9%20%EA%B3%BC%EC%A0%9C/%EA%B8%B0%EC%97%85%EC%9D%98%EC%A3%BC%EC%9A%94%EC%84%9C%EB%B9%84%EC%8A%A4.html">기업의 주요 서비스</a></li>
+			
+		</ul>
+	</nav>
+	<script type="text/javascript">
+		var now = new Date();
+		if(now.getHours()<12){
+			document.body.style.backgroundColor="lightskyblue";
+		}
+		else
+		{
+			document.body.style.backgroundColor="lightblue";
+		}
+	</script>
+	<script type="text/javascript">
+	</script>
+	<section>
+		<article>
+			<p id="text">
+				이 회사가 리그 및 연맹과의 파트너십이 있다. STATS PERFORM은 스포츠 데이터를 수집하고 상업화하기 위해 글로벌 스포츠 리그 및 연맹과 여러 장기 파트너십을 구축했다. 프리미어리그, WTA, FIBA, 라리가, AELTC가 있다. 또 상업적인 서비스뿐만 아니라, STATS PERFORM은 또한 메이저 리그에 무결성 서비스를 제공하여 경기 조작의 예방, 탐지 및 대응을 돕는다. STATS PERFORM 에서 제공하는 서비스는 미디어, 빅테크, 프로페셔널 팀, 베팅 오퍼레이터 등 4개 시장으로 나눈다.
+			</p>
+		</article>
+		<article>
+			<details>
+            <summary> 미디어</summary>
+            <p>이 회사는 PressBox 플랫폼을 통해 디지털 미디어 시장에 서비스를 제공한다. PressBox는 팬 활성화 및 참여를 유도하도록 설계된 일련의 콘텐츠 제작 도구이다.</p>
+        </details>
+        <details>
+            <summary>빅테크</summary>
+            <p>이 회사는 전 세계 주요 기술 회사 대부분과 협력하여 Opta 데이터 피드, 고급 메트릭 및 예측 분석을 제공한다.</p>
+        </details>
+        <details>
+            <summary>프로팀</summary>
+            <p>프로 서비스를 통해 Stats Perform은 스포츠 팀과 협력하여 모집, 경기 분석 및 전략적 계획 전반에서 성과를 향상시킨다.</p>
+        </details>
+        <details>
+            <summary>배팅 및 게임</summary>
+            <p>프들의 베팅 서비스에는 라이브 스트림, 초고속 데이터 및 자세한 플레이어 데이터가 포함된다.</p>
+        </details>	</article>
+        <article><!--chapter10장 윈도우 (1) -->
+        	<p id="ex">자세한 사항은 그림을 올리고 있으세요</p><br>
+        	<div style="text-align: center;"><img id ="img" src="stats perform.png" 
+        	onmouseover="startTimer(10000)"
+        	onmouseout ="cancelTimer()" ></div>
+        	<script type="text/javascript">
+        		var timerID = null;
+        		function startTimer(time){
+        			timerID = setTimeout("load('https://www.statsperform.com/')",time);
+        			document.getElementById("img").title = "타이머 작동 시작...";
+        		}
+        		function cancelTimer(){
+        			if(timerID!=niull)
+        				clearTimeout(timerID);
+        		}
+        		function load(url){
+        			window.location = url;
+        		}
+        	</script>
+        	
+        </article>
+        <article>
+        	<canvas id="myCanvas" style="background-color: white;"
+        	width="225" height="225"></canvas>
+        	<script type="text/javascript">
+        		var canvas = document.getElementById("myCanvas");
+        		var context = canvas.getContext("2d")
+
+        		var img = new Image();
+        		img.onload = function(){
+        			context.drawImage(img,50,50,100,100);
+        		}
+        		img.src = "thank.png"
+        	</script>
+        </article>
+	</section>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>기업설명홈페이지</title>
+	<script type="text/javascript"> // &chapter 6 자바스크립트 언어 (2)
+		var p;
+		function init(){
+			p = document.getElementById("explain")
+			p.onmouseover = over;
+			p. onmouseout = out;
+		}
+		function over()
+		{
+			p.style.backgroundColor="lightskyblue";
+
+		}
+		function out()
+		{
+			p.style.backgroundColor="white";
+		}
+	</script>
+	<style type="text/css">
+		/*chapter 4 css 1(색과 텍스트 꾸미기), 2(시각적 효과 text-shadow)*/
+		h1{ 
+			text-align: center;
+			color: aliceblue ;
+			text-shadow: 2px 2px 4px yellowgreen; 
+		}
+		
+
+		#menubar{
+			background: darkblue;
+			height: 20%;
+			
+		}
+		#menubar ul{
+			text-align: center;
+			margin: 10px;
+			padding: 10px;
+			width: 100%;
+		}
+		#menubar ul li{
+			display: inline-block;
+			list-style-type: none;
+			padding: 0px 15px;
+		}
+		/*chapter5 css 고급활용 1(인라인 블록)*/
+		#menubar ul li a{
+			color : white;
+			text-decoration: none;
+		}
+		/*chapter5 css 고급활용 2(리스트 꾸미기)*/
+		#menubar ul li a:hover{
+			color: violet;
+		}
+		#line{
+			background-color: darkblue;
+
+		}
+		#explain{
+			width: 600px;
+			margin-left: auto;
+			margin-right: auto;
+
+		}
+		#summary{
+			text-align: center;
+		}
+		img{
+			width: 400px;
+			height: 300px;
+		}
+		#back{
+			display: inline-block;
+		}
+
+
+	</style>
+</head>
+<body onload="init()"><header><!--&chapter 3 문서구조화  1(시맨틱 태그)--> 
+		<h1>기업설명</h1>
+	</header>
+	<nav id = "menubar">
+		<ul>
+			<li><a href="file:///C:/Users/ckwns/Desktop/%EC%9B%B9%20%EA%B3%BC%EC%A0%9C/%EA%B8%B0%EC%97%85%EC%86%8C%EA%B0%9C.html">Home</a></li><!--&chapter2 HTML 기본 문서 1(리스트),2(하이퍼링크)-->
+			<li><a href="file:///C:/Users/ckwns/Desktop/%EC%9B%B9%20%EA%B3%BC%EC%A0%9C/%EC%A3%BC%EC%A0%9C%EC%84%A0%EC%A0%95%EB%8F%99%EA%B8%B0.html">주제 선정 동기</a> </li>
+			<li><a href="file:///C:/Users/ckwns/Desktop/%EC%9B%B9%20%EA%B3%BC%EC%A0%9C/%EA%B0%84%EB%9E%B5%ED%95%9C%EA%B8%B0%EC%97%85%EC%86%8C%EA%B0%9C.html">간략한 기업 소개</a></li>
+			<li><a href="file:///C:/Users/ckwns/Desktop/%EC%9B%B9%20%EA%B3%BC%EC%A0%9C/%EA%B8%B0%EC%97%85%EC%9D%98%EC%97%AD%EC%82%AC.html">기업의 역사</a></li>
+			<li><a href="file:///C:/Users/ckwns/Desktop/%EC%9B%B9%20%EA%B3%BC%EC%A0%9C/%EA%B8%B0%EC%97%85%EC%9D%98%EC%A3%BC%EC%9A%94%EC%84%9C%EB%B9%84%EC%8A%A4.html">기업의 주요 서비스</a></li>
+			
+		</ul>
+	</nav>
+	<script type="text/javascript">
+		var now = new Date();
+		if(now.getHours()<12){
+			document.body.style.backgroundColor="lightskyblue";
+		}
+		else
+		{
+			document.body.style.backgroundColor="lightblue";
+		}
+	</script>
+	<section>
+		<article>
+			<p id="explain">STATS PERFORM 스포츠 데이터 및 분석 회사이다. 정확히 설명하자면 회사는 프로 팀 성적, 디지털, 미디어, 방송, 베팅 등 다양한 스포츠 분야에서 사용하기 위한 스포츠 데이터 수집과 예측 분석에 관여하고 있다. STATS PERFORM은 런던에 본사를 두고 있으며, 암스테르담, 시카고, 마드리드, 니스, 파리, 프라하, 상파울루, 시드니등에 사무소를 두고 있다. 사무실 외에도 케이프타운, 두바이, 서울, 도쿄 등을 포함한 지역 시장에서 영업하는 전 세계 정규직 직원을 보유하고 있다. </p>
+		</article>
+		<article id="summary"><!--&chapter 3 문서구조화  2(시맨틱 태그summary)--> 
+			<h3>STATS PERFORM</h3>
+			<details>
+				<summary>parent company</summary>
+				<img src="VISTA.png">
+			</details>
+
+			<details>
+				<summary>affiliated company</summary>
+				<div id="back"><img src="opta.png"><img src="AI.jpg"></div>
+			</details>
+		</article>
+	</section>
+
+</body>
+</html>

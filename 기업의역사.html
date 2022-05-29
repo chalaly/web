@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>기업설명홈페이지</title>
+	<style type="text/css">
+		/*chapter 4 css 1(색과 텍스트 꾸미기), 2(시각적 효과 text-shadow)*/
+		h1{ 
+			text-align: center;
+			color: aliceblue ;
+			text-shadow: 2px 2px 4px yellowgreen; 
+		}
+		
+
+		#menubar{
+			background: darkblue;
+			height: 20%;
+			
+		}
+		#menubar ul{
+			text-align: center;
+			margin: 10px;
+			padding: 10px;
+			width: 100%;
+		}
+		#menubar ul li{
+			display: inline-block;
+			list-style-type: none;
+			padding: 0px 15px;
+		}
+		/*chapter5 css 고급활용 1(인라인 블록)*/
+		#menubar ul li a{
+			color : white;
+			text-decoration: none;
+		}
+		/*chapter5 css 고급활용 2(리스트 꾸미기)*/
+		#menubar ul li a:hover{
+			color: violet;
+		}
+		#line{
+			background-color: darkblue;
+
+		}
+		#history{
+			width: 600px;
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		pre{
+			text-align: right;
+		}
+		#myDiv{
+			text-align: center;
+		}
+		
+
+	</style>
+	<script type="text/javascript">//&chapter8 getElementByTag사용(1)
+		function change(){
+			var spanArray = document.getElementsByTagName("span");
+			for(var i=0; i<spanArray.length; i++)
+			{
+				var span = spanArray[i];
+				span.style.color = "orchid";
+			    span.style.fontSize ="15px";
+			}
+
+		}
+	</script>
+</head>
+<body id = "parent">
+	<header><!--&chapter 3 문서구조화  1(시맨틱 태그)--> 
+		<h1>기업설명</h1>
+	</header>
+	<nav id = "menubar">
+		<ul>
+			<li><a href="file:///C:/Users/ckwns/Desktop/%EC%9B%B9%20%EA%B3%BC%EC%A0%9C/%EA%B8%B0%EC%97%85%EC%86%8C%EA%B0%9C.html">Home</a></li><!--&chapter2 HTML 기본 문서 1(리스트),2(하이퍼링크)-->
+			<li><a href="file:///C:/Users/ckwns/Desktop/%EC%9B%B9%20%EA%B3%BC%EC%A0%9C/%EC%A3%BC%EC%A0%9C%EC%84%A0%EC%A0%95%EB%8F%99%EA%B8%B0.html">주제 선정 동기</a> </li>
+			<li><a href="file:///C:/Users/ckwns/Desktop/%EC%9B%B9%20%EA%B3%BC%EC%A0%9C/%EA%B0%84%EB%9E%B5%ED%95%9C%EA%B8%B0%EC%97%85%EC%86%8C%EA%B0%9C.html">간략한 기업 소개</a></li>
+			<li><a href="file:///C:/Users/ckwns/Desktop/%EC%9B%B9%20%EA%B3%BC%EC%A0%9C/%EA%B8%B0%EC%97%85%EC%9D%98%EC%97%AD%EC%82%AC.html">기업의 역사</a></li>
+			<li><a href="file:///C:/Users/ckwns/Desktop/%EC%9B%B9%20%EA%B3%BC%EC%A0%9C/%EA%B8%B0%EC%97%85%EC%9D%98%EC%A3%BC%EC%9A%94%EC%84%9C%EB%B9%84%EC%8A%A4.html">기업의 주요 서비스</a></li>
+			
+		</ul>
+	</nav>
+	<script type="text/javascript">
+		var now = new Date();
+		if(now.getHours()<12){
+			document.body.style.backgroundColor="lightskyblue";
+		}
+		else
+		{
+			document.body.style.backgroundColor="lightblue";
+		}
+	</script>
+	<section>
+		<article>
+			<ul id="history">
+				<li><span>STATS, Inc.는 1981년 4월 회사의 CEO가 된 John Dewan에 의해 설립되었다. 회사명은 "Sports Team Analysis and Tracking Systems"의 약자이다. STATS는 야구 통계를 수집하기 위해 만들어진 자원봉사 네트워크인 비영리 프로젝트 점수표의 결과였다.</span></li>
+				<li><span>ERFORM 그룹은 2007년 프리미엄 TV 유한회사와 인폼 그룹의 합병으로 설립되었다. 원래 콘텐츠 유통, 구독, 광고와 스폰서, 기술과 제작에 관여했다.
+				</span></li>
+				<li><span>2013년, 퍼포먼스 그룹은 옵타 스포츠를 인수했다. 옵타는 1996년에 설립되었으며 현재도 STATS PERFORM의 일부이다.</span></li>
+				<li><span>2014년 6월, 폭스 스포츠와 AP는 STATS LLC를 비스타 에퀴티 파트너스에 매각했다.</span></li>
+				<li><span>2015년 초, STATS는 더 스포츠 네트워크와 프로존의 유선 서비스를 인수했다. Vista Equity Partners는 또한 빅데이터를 기반으로 자연어 생성(특히 원시 통계에서 스포츠 이벤트에 대한 유선 보고서 생성 포함)을 사용하는 데 관여하는 회사인 Automated Insights를 인수했다.</span></li>
+				<li><span>2019년 4월, 비스타 에퀴티 파트너스는 퍼포먼스 그룹의 이전 스포츠 데이터 자회사였던 퍼포먼스 콘텐츠를 인수할 의사를 밝혔다. 그 회사는 스포츠 스트리밍 서비스 DAZN에 더 집중하기 위해 그 부동산을 매각했다. DAZN 그룹은 살아남은 주체의 "상당한 소수 지분"을 보유할 것이라고 언급되었으며, 이는 인공지능과 기계 학습의 사용에 강력하게 초점을 맞추어야 했다.
+				</span></li>
+				<li><span>2019년 7월 15일, 합병된 회사는 STATS PERFORM으로 알려져 있으며, STATS의 CEO인 Carl Mergele에 의해 운영될 것이라고 발표되었다. 그는 그 회사가 "비할 데 없는 AI 기술로 엄청난 양의 스포츠 데이터의 힘을 이용할 것"이라고 말했다.
+                </span></li>
+			</ul>
+		</article>
+		<article>
+			<div style="text-align: center;"><button id="button" style ="display: inline-block" onclick="change()">누르세요</button></div>
+		</article>
+		</section>
+
+</body>
+</html>
